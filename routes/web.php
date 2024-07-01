@@ -1,9 +1,10 @@
 <?php
 
-use App\Livewire\ClienteMain;
+
+use App\Livewire\ClientMain;
 use App\Livewire\Dashboard\Main;
-use App\Livewire\ProveedorMain;
-use App\Livewire\TrajeMain;
+
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,7 +17,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard',Main::class)->name('dashboard');
-    Route::get('/clientes',ClienteMain::class)->name('clientes');
-    Route::get('/proveedores',ProveedorMain::class)->name('proveedores');
-    Route::get('/trajes',TrajeMain::class)->name('trajes');
+    Route::get('clientes',ClientMain::class)->name('clientes');
+
 });
+
+

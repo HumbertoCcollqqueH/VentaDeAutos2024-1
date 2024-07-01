@@ -35,3 +35,8 @@
                     </main>
                 </div>
             </div>
+        </div>
+        @stack('modals')
+        @stack('js')
+    </body>
+</html>
